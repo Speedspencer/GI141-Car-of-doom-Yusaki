@@ -10,13 +10,16 @@ public class reload : MonoBehaviour
         {
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
+            Debug.Log("Success!");
         }
     }
-    void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.tag == "Player")
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
         {
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
+            Destroy(other.gameObject);
         }
     }
+
 }
