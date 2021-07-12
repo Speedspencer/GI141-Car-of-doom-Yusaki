@@ -7,6 +7,7 @@ public class RoadGenScript : MonoBehaviour
     public Transform startPos;
     int nextstep=0;
     public GameObject[] PrefabsRoad;//hold various types of road
+    public int nextsteplength;
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class RoadGenScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        nextstep+=9;
+        nextstep += nextsteplength;
         Instantiate(PrefabsRoad[Random.Range(0, PrefabsRoad.Length)], new Vector3(transform.position.x + nextstep, startPos.position.y, startPos.position.z), Quaternion.identity);
     }
 }
