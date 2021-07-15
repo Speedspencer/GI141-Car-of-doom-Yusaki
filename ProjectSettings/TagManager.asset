@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
+  - FxTemporaire
+  - obstacle
   layers:
   - Default
   - TransparentFX
@@ -41,4 +42,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: obstacle
+    uniqueID: 2830785107
     locked: 0

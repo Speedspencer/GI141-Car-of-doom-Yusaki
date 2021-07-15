@@ -11,12 +11,7 @@ public class PlayerMoveWithForce : MonoBehaviour
     public KeyCode MoveBackwardKeycode = KeyCode.S;
     public KeyCode TurnRightKeyCode = KeyCode.D;
     public KeyCode TurnLeftKeyCode = KeyCode.A;
-    public KeyCode ShiftUp = KeyCode.LeftShift;
-    public KeyCode ShiftDown = KeyCode.LeftControl;
-    public float sprintSpeed;
     public float maxSpeed;
-    float sprint = 0.0f;
-    public int sprintadd;
 
 
     // Start is called before the first frame update
@@ -28,25 +23,16 @@ public class PlayerMoveWithForce : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(ShiftUp))
-        {
-            sprintSpeed = sprintSpeed + sprintadd;
-        }
-        else if (Input.GetKeyDown(ShiftDown))
-        {
-            sprintSpeed = sprintSpeed - sprintadd;
-        }
-        if (Input.GetKey(MoveForwardKeyCode) && sprintSpeed <= 300)
+
+        if (Input.GetKey(MoveForwardKeyCode))
         {
             PhysicBody.AddForce(transform.forward * Time.deltaTime * MoveForce);
-            GetComponent<Rigidbody>().velocity = Vector3.ClampMagnitude(GetComponent<Rigidbody>().velocity, maxSpeed + sprintSpeed);
-            Debug.Log("Text: " + maxSpeed + sprintSpeed);
+            GetComponent<Rigidbody>().velocity = Vector3.ClampMagnitude(GetComponent<Rigidbody>().velocity, maxSpeed);
         }
-        else if (Input.GetKey(MoveBackwardKeycode) && sprintSpeed >= 0)
+        else if (Input.GetKey(MoveBackwardKeycode))
         {
             PhysicBody.AddForce(-transform.forward * Time.deltaTime * MoveForce);
-            GetComponent<Rigidbody>().velocity = Vector3.ClampMagnitude(GetComponent<Rigidbody>().velocity, maxSpeed + sprintSpeed);
-            Debug.Log("Text: " + maxSpeed + sprintSpeed);
+            GetComponent<Rigidbody>().velocity = Vector3.ClampMagnitude(GetComponent<Rigidbody>().velocity, maxSpeed);
         }
 
         if (Input.GetKey(TurnRightKeyCode))
