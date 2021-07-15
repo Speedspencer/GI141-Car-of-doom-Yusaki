@@ -575,11 +575,12 @@ GameObject:
   - component: {fileID: 6733999535050869118}
   - component: {fileID: 3700825554424326460}
   - component: {fileID: 6733999535436662450}
+  - component: {fileID: 7006926442214461817}
   - component: {fileID: 6733999535436662453}
   - component: {fileID: 6733999535436662456}
   m_Layer: 0
   m_Name: Veh_Car_Blue_Z
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -682,7 +683,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6733999535436662453
+--- !u!114 &7006926442214461817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -690,6 +691,28 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6733999535053117840}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d397b65179cb624189d2cde30a60eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PhysicBody: {fileID: 0}
+  MoveForce: 100000
+  TurnSpeed: 20
+  MoveForwardKeyCode: 119
+  MoveBackwardKeycode: 115
+  TurnRightKeyCode: 100
+  TurnLeftKeyCode: 97
+  maxSpeed: 0
+  Broken: 0
+  ScoreMann: {fileID: 0}
+--- !u!114 &6733999535436662453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6733999535053117840}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cefd04aef602b9c498e6b46f71e7a7bf, type: 3}
   m_Name: 
