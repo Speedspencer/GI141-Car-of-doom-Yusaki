@@ -1,3 +1,2 @@
 # GI141-Classs-Yusaki
-Test REs For Test Game
-edit01 test branch
+GI141 Class, First Project
