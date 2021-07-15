@@ -389,6 +389,7 @@ MonoBehaviour:
   score: 0
   WinText: {fileID: 2137327871}
   reloadd: {fileID: 1611316946}
+  winscore: 30
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +833,7 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
+  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -911,13 +913,28 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3f21ee5711ac634a9aefab4f5ad4d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1611316945}
   offset: {x: -10, y: 6, z: 0}
+--- !u!114 &534669907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f573c684277cff4da76c3fea7173119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1611316953}
+  smoothSpeed: 0.125
+  offset: {x: -10, y: 11, z: 0}
 --- !u!1 &653480394 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 759684483680496348, guid: 076f2f75c97be404493e1d77d52993b6, type: 3}

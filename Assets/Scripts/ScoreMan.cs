@@ -12,6 +12,7 @@ public class ScoreMan : MonoBehaviour
     public float score = 0;
     public GameObject WinText;
     public reload reloadd;
+    public int winscore;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class ScoreMan : MonoBehaviour
 
         scoretext.text = "Score : " + (int)score;
 
-        if (score >= 10)
+        if (score >= winscore)
         {
             WinText.SetActive(true);
             reloadd.win();
