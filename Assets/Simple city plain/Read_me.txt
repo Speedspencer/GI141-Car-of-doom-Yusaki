@@ -34,3 +34,5 @@ to turn the light on, set the light object in the lamp on active after lightbakj
 
 
 For ask, ask on the support site and i wish you much success with you project.
+
+Yusaki was here.
