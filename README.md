@@ -1,4 +1,4 @@
-# GI141-Classs-Yusaki
+# GI141-Car-of-doom-Yusaki
 GI141 Class, First Project
 
 รายชื่อสมาชิก
